@@ -22,6 +22,8 @@ API
 
 ### Barème à Points
 
+Le Barème des Œuvres de Commande en Publicité — aussi appelé _Barème à Points_ — est le seul barème officiel de cession de droits d'utilisation pour les œuvres de commande en publicité. Il découle de la décision du 23 février 1987, publiée au Journal Officiel le 2 mai 1987. **Ce barème est obligatoire**.
+
 ```javascript
 agessa.commande.calcul ( bareme, volume [ , verbose ] )
 
@@ -60,7 +62,7 @@ _String_ `bareme` :
 
 _Number_ `volume`
 
-_Boolean_ `verbose
+_Boolean_ `verbose`
 
 ### Cotisations sociales
 

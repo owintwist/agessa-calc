@@ -150,158 +150,53 @@ const agessa = {
   cotisations: {
     grid: {
       2018: {
-        secu: {
-          assiette: 1,
-          taux: 0.004
-        },
-        avp: {
-          assiette: 1,
-          taux: 0.069
-        },
-        csg: {
-          assiette: 0.9825,
-          taux: 0.092
-        },
-        crds: {
-          assiette: 0.9825,
-          taux: 0.005
-        },
-        cfp: {
-          assiette: 1,
-          taux: 0.0035
-        }
+        secu: { assiette: 1, taux: 0.004 },
+        avp: { assiette: 1, taux: 0.069 },
+        csg: { assiette: 0.9825, taux: 0.092 },
+        crds: { assiette: 0.9825, taux: 0.005 },
+        cfp: { assiette: 1, taux: 0.0035 }
       },
       2017: {
-        secu: {
-          assiette: 1,
-          taux: 0.0115
-        },
-        avp: {
-          assiette: 1,
-          taux: 0.069
-        },
-        csg: {
-          assiette: 0.9825,
-          taux: 0.075
-        },
-        crds: {
-          assiette: 0.9825,
-          taux: 0.005
-        },
-        cfp: {
-          assiette: 1,
-          taux: 0.0035
-        }
+        secu: { assiette: 1, taux: 0.0115 },
+        avp: { assiette: 1, taux: 0.069 },
+        csg: { assiette: 0.9825, taux: 0.075 },
+        crds: { assiette: 0.9825, taux: 0.005 },
+        cfp: { assiette: 1, taux: 0.0035 }
       },
       2016: {
-        secu: {
-          assiette: 1,
-          taux: 0.011
-        },
-        avp: {
-          assiette: 1,
-          taux: 0.069
-        },
-        csg: {
-          assiette: 0.9825,
-          taux: 0.075
-        },
-        crds: {
-          assiette: 0.9825,
-          taux: 0.005
-        },
-        cfp: {
-          assiette: 1,
-          taux: 0.0035
-        }
+        secu: { assiette: 1, taux: 0.011 },
+        avp: { assiette: 1, taux: 0.069 },
+        csg: { assiette: 0.9825, taux: 0.075 },
+        crds: { assiette: 0.9825, taux: 0.005 },
+        cfp: { assiette: 1, taux: 0.0035 }
       },
       2015: {
-        secu: {
-          assiette: 1,
-          taux: 0.0105
-        },
-        avp: {
-          assiette: 1,
-          taux: 0.0685
-        },
-        csg: {
-          assiette: 0.9825,
-          taux: 0.075
-        },
-        crds: {
-          assiette: 0.9825,
-          taux: 0.005
-        },
-        cfp: {
-          assiette: 1,
-          taux: 0.0035
-        }
+        secu: { assiette: 1, taux: 0.0105 },
+        avp: { assiette: 1, taux: 0.0685 },
+        csg: { assiette: 0.9825, taux: 0.075 },
+        crds: { assiette: 0.9825, taux: 0.005 },
+        cfp: { assiette: 1, taux: 0.0035 }
       },
       2014: {
-        secu: {
-          assiette: 1,
-          taux: 0.01
-        },
-        avp: {
-          assiette: 1,
-          taux: 0.068
-        },
-        csg: {
-          assiette: 0.9825,
-          taux: 0.075
-        },
-        crds: {
-          assiette: 0.9825,
-          taux: 0.005
-        },
-        cfp: {
-          assiette: 1,
-          taux: 0.0035
-        }
+        secu: { assiette: 1, taux: 0.01 },
+        avp: { assiette: 1, taux: 0.068 },
+        csg: { assiette: 0.9825, taux: 0.075 },
+        crds: { assiette: 0.9825, taux: 0.005 },
+        cfp: { assiette: 1, taux: 0.0035 }
       },
       2013: {
-        secu: {
-          assiette: 1,
-          taux: 0.0085
-        },
-        avp: {
-          assiette: 1,
-          taux: 0.0675
-        },
-        csg: {
-          assiette: 0.9825,
-          taux: 0.075
-        },
-        crds: {
-          assiette: 0.9825,
-          taux: 0.005
-        },
-        cfp: {
-          assiette: 1,
-          taux: 0.0035
-        }
+        secu: { assiette: 1, taux: 0.0085 },
+        avp: { assiette: 1, taux: 0.0675 },
+        csg: { assiette: 0.9825, taux: 0.075 },
+        crds: { assiette: 0.9825, taux: 0.005 },
+        cfp: { assiette: 1, taux: 0.0035 }
       },
       2012: {
-        secu: {
-          assiette: 1,
-          taux: 0.0085
-        },
-        avp: {
-          assiette: 1,
-          taux: 0.0665
-        },
-        csg: {
-          assiette: 0.9825,
-          taux: 0.075
-        },
-        crds: {
-          assiette: 0.9825,
-          taux: 0.005
-        },
-        cfp: {
-          assiette: 1,
-          taux: 0.0035
-        }
+        secu: { assiette: 1, taux: 0.0085 },
+        avp: { assiette: 1, taux: 0.0665 },
+        csg: { assiette: 0.9825, taux: 0.075 },
+        crds: { assiette: 0.9825, taux: 0.005 },
+        cfp: { assiette: 1, taux: 0.0035 }
       }
     },
     calcul: function (remunerationArtistique, annee) {
