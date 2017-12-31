@@ -195,7 +195,7 @@ const agessa = {
         crds: { assiette: 0.9825, taux: 0.005 },
         cafp: { assiette: 1, taux: 0.0035 },
         agessa: { assiette: 1, taux: 0.01 },
-        cdfp: { assiette: 1, taux: 0.001 }
+        cdfp: { assiette: 0, taux: 0 }
       },
       2012: {
         secu: { assiette: 1, taux: 0.0085 },
@@ -203,7 +203,7 @@ const agessa = {
         crds: { assiette: 0.9825, taux: 0.005 },
         cafp: { assiette: 1, taux: 0.0035 },
         agessa: { assiette: 1, taux: 0.01 },
-        cdfp: { assiette: 1, taux: 0.001 }
+        cdfp: { assiette: 0, taux: 0 }
       }
     },
     calcul: function (remunerationArtistique, annee) {
