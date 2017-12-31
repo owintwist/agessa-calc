@@ -22,6 +22,15 @@ API
 
 ```javascript
 agessa.commande.calcul ( bareme, volume [ , debug ] )
+
+return {  
+  bareme: nom du barème  
+  volume: volume  
+  tranche: tranche  
+  basePoints: points de base de la tranche  
+  points: total des points  
+  ajust: valeur
+}
 ```
 Calcul le nombre de points par `bareme` en fonction du `volume`
 
@@ -51,13 +60,31 @@ _Number_ `volume`
 
 _Boolean_ `debug`
 
-return _Object_ { `bareme`, `volume`, `tranche`, `basePoints`, `points`, `ajust` }
-
 
 ### Cotisations sociales
 
 ```javascript
 agessa.cotisations.calcul ( remunerationArtistique, annee )
+
+return {
+  auteur: {
+    details: {
+      secu: montant de la Sécurité Sociale,
+      avp: montant de l Assurance Vieillesse Plafonnée,
+      csg: montant de la Contribution Sociale Généralisée,
+      crds: montant de la Contribution au Remboursement de la Dette Sociale,
+      cfp: montant de la Contribution à la Formation Professionnelle
+    },
+    total: montant des cotisations imputables à l Auteur
+  },
+  diffuseur: {
+    details: {
+      agessa: 1% diffuseur,
+      cfp: CFP diffuseur
+    },
+    total: montant des cotisations imputables au Diffuseur
+  }
+}
 ```
 
 Calcul les montants des Cotisations Sociales pour la `remunerationArtistique` avec les taux de l'`annee`.
@@ -65,5 +92,3 @@ Calcul les montants des Cotisations Sociales pour la `remunerationArtistique` av
 _Number_ `remunerationArtistique`
 
 _Number_ `annee`
-
-return _Object_ { `auteur`, `diffuseur` }

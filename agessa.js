@@ -164,12 +164,12 @@ const agessa = {
         },
         crds: {
           assiette: 0.9825,
-          taux: 0.005,
+          taux: 0.005
         },
         cfp: {
           assiette: 1,
-          taux: 0.0035,
-        },
+          taux: 0.0035
+        }
       },
       2017: {
         secu: {
@@ -186,12 +186,12 @@ const agessa = {
         },
         crds: {
           assiette: 0.9825,
-          taux: 0.005,
+          taux: 0.005
         },
         cfp: {
           assiette: 1,
-          taux: 0.0035,
-        },
+          taux: 0.0035
+        }
       },
       2016: {
         secu: {
@@ -208,12 +208,12 @@ const agessa = {
         },
         crds: {
           assiette: 0.9825,
-          taux: 0.005,
+          taux: 0.005
         },
         cfp: {
           assiette: 1,
-          taux: 0.0035,
-        },
+          taux: 0.0035
+        }
       },
       2015: {
         secu: {
@@ -230,11 +230,11 @@ const agessa = {
         },
         crds: {
           assiette: 0.9825,
-          taux: 0.005,
+          taux: 0.005
         },
         cfp: {
           assiette: 1,
-          taux: 0.0035,
+          taux: 0.0035
         }
       },
       2014: {
@@ -252,12 +252,12 @@ const agessa = {
         },
         crds: {
           assiette: 0.9825,
-          taux: 0.005,
+          taux: 0.005
         },
         cfp: {
           assiette: 1,
-          taux: 0.0035,
-        },
+          taux: 0.0035
+        }
       },
       2013: {
         secu: {
@@ -274,12 +274,12 @@ const agessa = {
         },
         crds: {
           assiette: 0.9825,
-          taux: 0.005,
+          taux: 0.005
         },
         cfp: {
           assiette: 1,
-          taux: 0.0035,
-        },
+          taux: 0.0035
+        }
       },
       2012: {
         secu: {
@@ -296,20 +296,19 @@ const agessa = {
         },
         crds: {
           assiette: 0.9825,
-          taux: 0.005,
+          taux: 0.005
         },
         cfp: {
           assiette: 1,
-          taux: 0.0035,
-        },
+          taux: 0.0035
+        }
       }
     },
-    calcul: function(remunerationArtistique, annee) {
+    calcul: function (remunerationArtistique, annee) {
       if (!agessa.cotisations.grid[annee]) {
         console.error("La grille de taux de cotisation sociale pour l'année " + annee + " n'est pas disponible.")
         return false
       } else {
-        console.log('année', annee)
         let ret = {
           auteur: {
             details: {
@@ -321,12 +320,14 @@ const agessa = {
             }
           },
           diffuseur: {
-            unpourcent: Math.round(remunerationArtistique * 0.01 * 100) / 100,
-            contribPro: Math.round(remunerationArtistique * 0.001 * 100) / 100
+            details: {
+              agessa: Math.round(remunerationArtistique * 0.01 * 100) / 100,
+              cfp: Math.round(remunerationArtistique * 0.001 * 100) / 100
+            }
           }
         }
         ret.auteur.total = Math.round((ret.auteur.details.secu + ret.auteur.details.avp + ret.auteur.details.csg + ret.auteur.details.crds + ret.auteur.details.cfp) * 100) / 100
-        ret.diffuseur.total = Math.round((ret.diffuseur.unpourcent + ret.diffuseur.contribPro) * 100) / 100
+        ret.diffuseur.total = Math.round((ret.diffuseur.details.agessa + ret.diffuseur.details.cfp) * 100) / 100
         return ret
       }
     }
