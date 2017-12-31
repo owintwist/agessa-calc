@@ -6,6 +6,14 @@ Deal with AGESSA
 Installation
 ------------
 
+Via NPM
+
+```
+npm install --save agessa-calc
+```
+
+Via GitHub
+
 ```
 npm install --save https://github.com/owintwist/agessa-calc
 ```
