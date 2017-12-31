@@ -73,7 +73,7 @@ const agessa = {
         pts: [ 34, 50, 76, 114, 170, 256, 384, 576, 865, 1297, 1946 ]
       }
     ],
-    calcul: (bareme, volume, debug) => {
+    calcul: (bareme, volume, verbose) => {
       if (typeof bareme === 'number') bareme = agessa.commande.grid[bareme]
       else if (typeof bareme === 'string') {
         switch (bareme) {
@@ -111,7 +111,7 @@ const agessa = {
       let its = 0
       let points
 
-      if (debug) console.log('Barème:', bareme.name)
+      if (verbose) console.log('Barème:', bareme.name)
 
       if (volume && volume > 0) {
         while (!points && tranche < 1000) {
@@ -122,11 +122,11 @@ const agessa = {
             if (tranche > 2) basePts = bareme.pts[tranche - 2] || Math.ceil(basePts * 1.5)
             maxPts = bareme.pts[tranche - 1] || Math.ceil(basePts * 1.5)
             its = (maxPts - basePts) / ((max - min) / bareme.ajust)
-          } else if (debug) {
+          } else if (verbose) {
             maxPts = basePts
           }
 
-          if (debug) console.log(' * Tranche ' + tranche + ':', min + ' => ' + max, basePts + ' => ' + maxPts, '/', its)
+          if (verbose) console.log(' * Tranche ' + tranche + ':', min + ' => ' + max, basePts + ' => ' + maxPts, '/', its)
 
           if (volume >= min && volume < max) {
             if (tranche > 1) points = basePts + ((volume - min) / bareme.ajust * its)

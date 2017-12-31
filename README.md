@@ -1,5 +1,7 @@
 # agessa-calc
-Deal whith AGESSA
+
+Deal with AGESSA
+
 
 Installation
 ------------
@@ -21,7 +23,7 @@ API
 ### Barème à Points
 
 ```javascript
-agessa.commande.calcul ( bareme, volume [ , debug ] )
+agessa.commande.calcul ( bareme, volume [ , verbose ] )
 
 return {  
   bareme: nom du barème  
@@ -58,8 +60,7 @@ _String_ `bareme` :
 
 _Number_ `volume`
 
-_Boolean_ `debug`
-
+_Boolean_ `verbose
 
 ### Cotisations sociales
 
