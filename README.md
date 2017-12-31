@@ -72,20 +72,19 @@ agessa.cotisations.calcul ( remunerationArtistique, annee )
 return {
   auteur: {
     details: {
-      secu: montant de la Sécurité Sociale,
-      avp: montant de l Assurance Vieillesse Plafonnée,
-      csg: montant de la Contribution Sociale Généralisée,
-      crds: montant de la Contribution au Remboursement de la Dette Sociale,
-      cfp: montant de la Contribution à la Formation Professionnelle
+      secu: "montant de la Contribution Diffuseur",
+      csg: "montant de la Contribution Sociale Généralisée",
+      crds: "montant de la Contribution au Remboursement de la Dette Sociale",
+      cafp: "montant de la Contribution de l'Auteur à la Formation Professionnelle"
     },
-    total: montant des cotisations imputables à l Auteur
+    total: "total des cotisations imputables à l'Auteur"
   },
   diffuseur: {
     details: {
-      agessa: 1% diffuseur,
-      cfp: CFP diffuseur
+      agessa: "montant de la Contribution diffuseur « 1% diffuseur »",
+      cdfp: "montant de la Contribution du Diffuseur à la Formation Professionnelle"
     },
-    total: montant des cotisations imputables au Diffuseur
+    total: "total des cotisations imputables au Diffuseur"
   }
 }
 ```

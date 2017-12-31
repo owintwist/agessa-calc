@@ -151,52 +151,59 @@ const agessa = {
     grid: {
       2018: {
         secu: { assiette: 1, taux: 0.004 },
-        avp: { assiette: 1, taux: 0.069 },
         csg: { assiette: 0.9825, taux: 0.092 },
         crds: { assiette: 0.9825, taux: 0.005 },
-        cfp: { assiette: 1, taux: 0.0035 }
+        cafp: { assiette: 1, taux: 0.0035 },
+        agessa: { assiette: 1, taux: 0.01 },
+        cdfp: { assiette: 1, taux: 0.001 }
       },
       2017: {
         secu: { assiette: 1, taux: 0.0115 },
-        avp: { assiette: 1, taux: 0.069 },
         csg: { assiette: 0.9825, taux: 0.075 },
         crds: { assiette: 0.9825, taux: 0.005 },
-        cfp: { assiette: 1, taux: 0.0035 }
+        cafp: { assiette: 1, taux: 0.0035 },
+        agessa: { assiette: 1, taux: 0.01 },
+        cdfp: { assiette: 1, taux: 0.001 }
       },
       2016: {
         secu: { assiette: 1, taux: 0.011 },
-        avp: { assiette: 1, taux: 0.069 },
         csg: { assiette: 0.9825, taux: 0.075 },
         crds: { assiette: 0.9825, taux: 0.005 },
-        cfp: { assiette: 1, taux: 0.0035 }
+        cafp: { assiette: 1, taux: 0.0035 },
+        agessa: { assiette: 1, taux: 0.01 },
+        cdfp: { assiette: 1, taux: 0.001 }
       },
       2015: {
         secu: { assiette: 1, taux: 0.0105 },
-        avp: { assiette: 1, taux: 0.0685 },
         csg: { assiette: 0.9825, taux: 0.075 },
         crds: { assiette: 0.9825, taux: 0.005 },
-        cfp: { assiette: 1, taux: 0.0035 }
+        cafp: { assiette: 1, taux: 0.0035 },
+        agessa: { assiette: 1, taux: 0.01 },
+        cdfp: { assiette: 1, taux: 0.001 }
       },
       2014: {
         secu: { assiette: 1, taux: 0.01 },
-        avp: { assiette: 1, taux: 0.068 },
         csg: { assiette: 0.9825, taux: 0.075 },
         crds: { assiette: 0.9825, taux: 0.005 },
-        cfp: { assiette: 1, taux: 0.0035 }
+        cafp: { assiette: 1, taux: 0.0035 },
+        agessa: { assiette: 1, taux: 0.01 },
+        cdfp: { assiette: 1, taux: 0.001 }
       },
       2013: {
         secu: { assiette: 1, taux: 0.0085 },
-        avp: { assiette: 1, taux: 0.0675 },
         csg: { assiette: 0.9825, taux: 0.075 },
         crds: { assiette: 0.9825, taux: 0.005 },
-        cfp: { assiette: 1, taux: 0.0035 }
+        cafp: { assiette: 1, taux: 0.0035 },
+        agessa: { assiette: 1, taux: 0.01 },
+        cdfp: { assiette: 1, taux: 0.001 }
       },
       2012: {
         secu: { assiette: 1, taux: 0.0085 },
-        avp: { assiette: 1, taux: 0.0665 },
         csg: { assiette: 0.9825, taux: 0.075 },
         crds: { assiette: 0.9825, taux: 0.005 },
-        cfp: { assiette: 1, taux: 0.0035 }
+        cafp: { assiette: 1, taux: 0.0035 },
+        agessa: { assiette: 1, taux: 0.01 },
+        cdfp: { assiette: 1, taux: 0.001 }
       }
     },
     calcul: function (remunerationArtistique, annee) {
@@ -208,16 +215,15 @@ const agessa = {
           auteur: {
             details: {
               secu: Math.round(remunerationArtistique * agessa.cotisations.grid[annee].secu.assiette * agessa.cotisations.grid[annee].secu.taux * 100) / 100,
-              avp: Math.round(remunerationArtistique * agessa.cotisations.grid[annee].avp.assiette * agessa.cotisations.grid[annee].avp.taux * 100) / 100,
               csg: Math.round(remunerationArtistique * agessa.cotisations.grid[annee].csg.assiette * agessa.cotisations.grid[annee].csg.taux * 100) / 100,
               crds: Math.round(remunerationArtistique * agessa.cotisations.grid[annee].crds.assiette * agessa.cotisations.grid[annee].crds.taux * 100) / 100,
-              cfp: Math.round(remunerationArtistique * agessa.cotisations.grid[annee].cfp.assiette * agessa.cotisations.grid[annee].cfp.taux * 100) / 100
+              cafp: Math.round(remunerationArtistique * agessa.cotisations.grid[annee].cafp.assiette * agessa.cotisations.grid[annee].cafp.taux * 100) / 100
             }
           },
           diffuseur: {
             details: {
-              agessa: Math.round(remunerationArtistique * 0.01 * 100) / 100,
-              cfp: Math.round(remunerationArtistique * 0.001 * 100) / 100
+              agessa: Math.round(remunerationArtistique * agessa.cotisations.grid[annee].agessa.assiette * agessa.cotisations.grid[annee].agessa.taux * 100) / 100,
+              cdfp: Math.round(remunerationArtistique * agessa.cotisations.grid[annee].cdfp.assiette * agessa.cotisations.grid[annee].cdfp.taux * 100) / 100
             }
           }
         }
