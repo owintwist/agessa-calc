@@ -1,5 +1,13 @@
 # agessa-calc
 Deal whith AGESSA
+
+Installation
+------------
+
+```
+npm install --save https://github.com/owintwist/agessa-calc
+```
+
 Utilisation
 -----------
 
