@@ -25,7 +25,7 @@ agessa.commande.calcul ( bareme, volume [ , debug ] )
 ```
 Calcul le nombre de points par `bareme` en fonction du `volume`
 
-Number `bareme` :
+_Number_ `bareme` :
 
  * `0` Presse et publications assimilées
  * `1` Affichages < 10m²
@@ -37,7 +37,7 @@ Number `bareme` :
 
 ou
 
-String `bareme` :
+_String_ `bareme` :
 
  * `presse` Presse et publications assimilées
  * `affichette` Affichages < 10m²
@@ -47,11 +47,11 @@ String `bareme` :
  * `poster` Posters, affichettes, objets publicitaires
  * `divers` Autres catalogues, brochures et imprimés divers
 
-Number `volume`
+_Number_ `volume`
 
-Boolean `debug`
+_Boolean_ `debug`
 
-return Object { `bareme`, `volume`, `tranche`, `basePoints`, `points`, `ajust` }
+return _Object_ { `bareme`, `volume`, `tranche`, `basePoints`, `points`, `ajust` }
 
 
 ### Cotisations sociales
@@ -62,8 +62,8 @@ agessa.cotisations.calcul ( remunerationArtistique, annee )
 
 Calcul les montants des Cotisations Sociales pour la `remunerationArtistique` avec les taux de l'`annee`.
 
-Number `remunerationArtistique`
+_Number_ `remunerationArtistique`
 
-Number `annee`
+_Number_ `annee`
 
-return Object { `auteur`, `diffuseur` }
+return _Object_ { `auteur`, `diffuseur` }

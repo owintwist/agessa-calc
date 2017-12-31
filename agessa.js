@@ -330,6 +330,7 @@ const agessa = {
         return ret
       }
     }
+  }
 }
 
 module.exports = agessa
