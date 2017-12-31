@@ -227,8 +227,8 @@ const agessa = {
             }
           }
         }
-        ret.auteur.total = Math.round((ret.auteur.details.secu + ret.auteur.details.avp + ret.auteur.details.csg + ret.auteur.details.crds + ret.auteur.details.cfp) * 100) / 100
-        ret.diffuseur.total = Math.round((ret.diffuseur.details.agessa + ret.diffuseur.details.cfp) * 100) / 100
+        ret.auteur.total = Math.round((ret.auteur.details.secu + ret.auteur.details.csg + ret.auteur.details.crds + ret.auteur.details.cafp) * 100) / 100
+        ret.diffuseur.total = Math.round((ret.diffuseur.details.agessa + ret.diffuseur.details.cdfp) * 100) / 100
         return ret
       }
     }
