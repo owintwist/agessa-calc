@@ -2,6 +2,12 @@
 
 Deal with AGESSA
 
+Avertissement
+-------------
+
+**Ce module est en développement actif (phase _Alpha_), dans le sens où la syntaxe pourrait changer à tout moment.  
+Il n'est donc pas conseillé de l'utiliser en production avant la `v1.0` !**
+
 
 Installation
 ------------
@@ -93,7 +99,8 @@ return {
       cdfp: "montant de la Contribution du Diffuseur à la Formation Professionnelle"
     },
     total: "total des cotisations imputables au Diffuseur"
-  }
+  },
+  tva: "montant de la TVA sur la Rémunération Artistique, au taux réduit des auteurs"
 }
 ```
 
